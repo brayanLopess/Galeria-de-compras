@@ -23,6 +23,9 @@ function renderProducts() {
     const container = document.getElementById("productsList")
     container.innerHTML = ""
 
+    const productsQuantity = document.getElementById("productsQuantity")
+    productsQuantity.textContent = products.length
+    
     const filteredProducts = getFilteredProducts()
     if(filteredProducts.length === 0) {
         const empty = document.createElement("p")
@@ -30,9 +33,6 @@ function renderProducts() {
         container.appendChild(empty)
         return
     }
-
-    const productsQuantity = document.getElementById("productsQuantity")
-    productsQuantity.textContent = products.length
 
     filteredProducts.forEach((product) => {
         const item = document.createElement("div")

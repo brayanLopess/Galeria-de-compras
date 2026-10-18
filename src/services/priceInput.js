@@ -1,16 +1,16 @@
-const priceInput = document.getElementById("price")
+const productPrice = document.getElementById("price")
 
-priceInput.addEventListener("input", () => {
-    const digits = priceInput.value.replace(/\D/g, "")
+productPrice.addEventListener("input", () => {
+    const digits = productPrice.value.replace(/\D/g, "")
 
     if(digits === "") {
-        priceInput.value = ""
+        productPrice.value = ""
         return
     }
 
     const value = Number(digits) / 100
 
-    priceInput.value = value.toLocaleString("pt-BR", {
+    productPrice.value = value.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"
     })
