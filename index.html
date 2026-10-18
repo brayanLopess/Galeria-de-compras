@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Galeria de compras</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Brayan L</h1>
+        <div id="headerLinks">
+            <a href="#">Kabum</a>
+            <a href="#">Pichau</a>
+            <a href="#">Terabyte</a>
+            <a href="#">Contato</a>
+        </div>
+    </header>
+
+    <div class="info">
+        <div class="infoHeader">
+            <h4>GALERIA 2026</h4>
+            <h2>Galeria de <span class="italic">Compras</span></h2>
+            <p>Produtos que pretendo comprar, com as informações do produto e valor.</p>
+            <a href="#">Ver coleção</a>
+        </div>
+        <div class="infoImg">
+            <img src="./src/assets/images/ca6c3203131af6882b1e8888b5f9789e.jpg">
+        </div> 
+    </div>
+
+    <div class="products flexDiv">
+        <div class="productsHeaderSection flexDiv">
+            <h3 class="ourGallery">Nossa galeria</h3>
+            <div class="flexDiv">
+                <h2 class="allProducts">Todos os Produtos</h2>
+                <div class="itemsQuantity">
+                    <p><span id="productsQuantity">8</span> produtos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="productsMainSection flexDiv">
+            <div id="addNewProduct">
+                <div class="alignmentMainSection">
+                    <input id="searchingProducts" class="searchProduct" placeholder="Busque um produto" type="search">
+                    <button id="registerNewProduct">Cadastrar novo produto</button>
+                </div>
+                <div id="formContent" class="hideDiv">
+                    <div class="background">
+                        <div class="closeFormButton">
+                            <button id="closeButton">
+                                <h4>X</h4>
+                            </button>
+                        </div>
+                        <form id="productForm">    
+                            <label for="name">Nome do produto:</label>
+                            <input type="text" name="name" id="name" placeholder="Ex: Teclado mecânico Gamer" required>
+
+                            <label for="category">Categoria do produto:</label>
+                            <input type="text" name="category" id="category" placeholder="Ex: Gabinete, Teclado, Mouse, etc" required>
+
+                            <label for="description">Descrição:</label>
+                            <textarea placeholder="Ex: Teclado mecânico com switcs azuis, RGB, layout 60%, ..." name="description" id="description" required></textarea>
+
+                            <label for="price">Valor:</label>
+                            <input type="text" inputmode="numeric" placeholder="Ex: R$ 255.99" name="price" id="price" required>
+
+                            <label for="image">Image (URL):</label>
+                            <input type="url" name="image" id="image">
+
+                            <button id="submitForm" type="submit">Adicionar produto</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="productsList" class="productsGrid">
+                <div class="item" id="firstItem">
+                    <img src="./src/assets/images/items/gabinete.png" alt="Imagem de Gabinete">
+
+                    <div id="description" class="description">
+                        <h4 class="category">Gabinetes</h4>
+                        <h2 class="itemName">Gabinete Corsair 3000D</h2>
+                        <h3 class="price">R$ 578,99</h3>
+                        <button id="btnMoreInfo" class="moreInfo">
+                            Veja mais
+                            <span>-></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
