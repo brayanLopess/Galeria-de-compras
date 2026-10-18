@@ -8,7 +8,7 @@ module.exports = {
 
     entry: path.resolve(__dirname, "src", "main.js"),
     output: {
-        filename: "main.js",
+        filename: "main.contenthash.js",
         path: path.resolve(__dirname, "dist"),
         publicPath: "./",
         clean: true
